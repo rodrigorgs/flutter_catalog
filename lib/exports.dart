@@ -13,3 +13,5 @@ export 'exemplo1.dart';
 export 'exemplo2.dart';
 export 'sandbox.dart';
 export 'widget_raiz.dart';
+export 'stack_intro.dart';
+export 'stack_positioned.dart';

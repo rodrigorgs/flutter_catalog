@@ -12,6 +12,7 @@ void main() {
     home: Scaffold(
       body: DemoApp(
         examples: [
+          // Example(sandbox, 'sandbox.dart'),
           Example(exemplo1, 'exemplo1.dart'),
           Example(exemplo2, 'exemplo2.dart'),
           Example(widget_raiz, 'widget_raiz.dart'),
@@ -26,6 +27,8 @@ void main() {
           Example(col_expanded, 'col_expanded.dart'),
           Example(col_flex, 'col_flex.dart'),
           Example(col_flexible, 'col_flexible.dart'),
+          Example(stack_intro, 'stack_intro.dart'),
+          Example(stack_positioned, 'stack_positioned.dart'),
         ],
       ),
     ),

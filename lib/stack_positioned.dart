@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget sandbox() {
+Widget stack_positioned() {
   //* Dentro de um `Stack`, o widget `Positioned` permite controlar a posição de um filho em relação à `Stack`.
   return Center(
     child: Stack(
