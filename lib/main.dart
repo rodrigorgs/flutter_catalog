@@ -7,7 +7,6 @@ import 'package:flutter_highlighter/themes/github.dart';
 import 'package:markdown_viewer/markdown_viewer.dart';
 
 void main() {
-  // runApp(WidgetDemoApp());
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
@@ -50,7 +49,6 @@ class DemoApp extends StatefulWidget {
 }
 
 class _DemoAppState extends State<DemoApp> {
-  // Example example = Example(sandbox, 'sandbox.dart');
   int exampleIndex = 0;
 
   @override
@@ -94,7 +92,6 @@ class _DemoAppState extends State<DemoApp> {
 }
 
 class ExampleView extends StatelessWidget {
-  // final home = () => 1;
   Widget Function() home = () => const Placeholder();
   String sourceFile = '';
 
@@ -119,7 +116,7 @@ class ExampleView extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Expanded(child: buildCodeWidget(), flex: 1),
+        Expanded(flex: 1, child: buildCodeWidget()),
         Container(
           width: 1,
           color: Colors.grey[300],
@@ -133,9 +130,9 @@ class ExampleView extends StatelessWidget {
               Expanded(
                 child: SingleChildScrollView(
                   child: Container(
-                    child: buildExplanationWidget(),
                     padding: const EdgeInsets.all(16),
                     color: Colors.blueGrey[100],
+                    child: buildExplanationWidget(),
                   ),
                 ),
               ),
@@ -223,7 +220,6 @@ class SourceCodeView extends StatelessWidget {
           theme: githubTheme,
           padding: const EdgeInsets.all(12),
           textStyle: GoogleFonts.firaCode(fontSize: 14),
-          // textStyle: GoogleFonts.sourceCodePro(fontSize: 12),
         ),
         Positioned(
           top: 0,
@@ -245,127 +241,3 @@ class SourceCodeView extends StatelessWidget {
     );
   }
 }
-
-// class MyWidget extends StatefulWidget {
-//   const MyWidget({super.key});
-
-//   @override
-//   State<MyWidget> createState() => _MyWidgetState();
-// }
-
-// class _MyWidgetState extends State<MyWidget> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }
-
-
-// // class WidgetDemoApp extends StatelessWidget {
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return MaterialApp(
-// //       home: WidgetDemo(),
-// //     );
-// //   }
-// // }
-
-// // class WidgetDemo extends StatefulWidget {
-// //   @override
-// //   _WidgetDemoState createState() => _WidgetDemoState();
-// // }
-
-// // class _WidgetDemoState extends State<WidgetDemo> {
-// //   // Sample widgets list
-// //   List<Widget> widgets = [
-// //     Text('Hello, World!'),
-// //     Container(
-// //       color: Colors.blue,
-// //       height: 100,
-// //       width: 100,
-// //     ),
-// //     IconButton(
-// //       icon: Icon(Icons.access_alarm),
-// //       onPressed: () {},
-// //     ),
-// //     // Add more sample widgets here
-// //   ];
-
-// //   int selectedIndex = 0;
-
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return Scaffold(
-// //       appBar: AppBar(
-// //         title: Text('Widget Demo'),
-// //       ),
-// //       body: Row(
-// //         children: [
-// //           Expanded(
-// //             flex: 1,
-// //             child: ListView.builder(
-// //               itemCount: widgets.length,
-// //               itemBuilder: (context, index) {
-// //                 return ListTile(
-// //                   title: Text('Widget ${index + 1}'),
-// //                   onTap: () {
-// //                     setState(() {
-// //                       selectedIndex = index;
-// //                     });
-// //                   },
-// //                   selected: selectedIndex == index,
-// //                 );
-// //               },
-// //             ),
-// //           ),
-// //           Expanded(
-// //             flex: 2,
-// //             child: Column(
-// //               crossAxisAlignment: CrossAxisAlignment.start,
-// //               children: [
-// //                 Container(
-// //                   padding: EdgeInsets.all(16),
-// //                   color: Colors.grey[200],
-// //                   child: Text(
-// //                     'Code:',
-// //                     style: TextStyle(
-// //                       fontWeight: FontWeight.bold,
-// //                     ),
-// //                   ),
-// //                 ),
-// //                 Container(
-// //                   padding: EdgeInsets.all(16),
-// //                   child: Text(
-// //                     widgets[selectedIndex].toString(),
-// //                     style: TextStyle(
-// //                       fontFamily: 'Courier',
-// //                     ),
-// //                   ),
-// //                 ),
-// //                 Expanded(
-// //                   child: SingleChildScrollView(
-// //                     padding: EdgeInsets.all(16),
-// //                     child: Column(
-// //                       crossAxisAlignment: CrossAxisAlignment.start,
-// //                       children: [
-// //                         Text(
-// //                           'Explanatory Text:',
-// //                           style: TextStyle(
-// //                             fontWeight: FontWeight.bold,
-// //                           ),
-// //                         ),
-// //                         Text(
-// //                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nulla quam. Proin consequat ligula non ligula tincidunt, in vestibulum urna iaculis. Duis accumsan convallis est, ut bibendum nisi hendrerit at. Aenean auctor mi at risus suscipit, non congue mauris ultrices. Vestibulum et lorem eu risus ullamcorper vehicula. Sed pretium convallis risus id egestas. Integer non metus nec elit luctus convallis nec nec mi. Maecenas vitae faucibus nulla, non efficitur ligula. Nullam nec diam auctor, vehicula tortor et, efficitur nunc. Fusce posuere vehicula arcu, et auctor ex. Ut varius justo eu quam molestie, nec euismod est malesuada. Nullam hendrerit at ex sit amet facilisis. Cras scelerisque at metus a volutpat. Aliquam fringilla vestibulum bibendum. Vivamus nec pretium tortor.',
-// //                         ),
-// //                       ],
-// //                     ),
-// //                   ),
-// //                 ),
-// //               ],
-// //             ),
-// //           ),
-// //         ],
-// //       ),
-// //     );
-// //   }
-// // }
