@@ -128,12 +128,13 @@ class ExampleView extends StatelessWidget {
             children: [
               Expanded(child: home()),
               Expanded(
-                child: SingleChildScrollView(
-                  child: Container(
-                    padding: const EdgeInsets.all(16),
-                    color: Colors.blueGrey[100],
-                    child: buildExplanationWidget(),
-                  ),
+                child: CustomScrollView(
+                  slivers: [
+                    SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: buildExplanationWidget(),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -165,12 +166,17 @@ class ExampleView extends StatelessWidget {
           if (explanation.isEmpty) {
             return const Text("No explanation found.");
           } else {
-            return MarkdownViewer(
-              explanation,
-              styleSheet: MarkdownStyle(
-                codeSpan: TextStyle(
-                  fontFamily: GoogleFonts.firaCode(fontWeight: FontWeight.w600)
-                      .fontFamily,
+            return Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.grey[300],
+              child: MarkdownViewer(
+                explanation,
+                styleSheet: MarkdownStyle(
+                  codeSpan: TextStyle(
+                    fontFamily:
+                        GoogleFonts.firaCode(fontWeight: FontWeight.w600)
+                            .fontFamily,
+                  ),
                 ),
               ),
             );
