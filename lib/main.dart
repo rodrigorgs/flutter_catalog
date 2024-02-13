@@ -12,7 +12,7 @@ void main() {
     home: Scaffold(
       body: DemoApp(
         examples: [
-          Example(exemplo1, 'exemplo1.dart1'),
+          Example(exemplo1, 'exemplo1.dart'),
           Example(exemplo2, 'exemplo2.dart'),
           Example(widget_raiz, 'widget_raiz.dart'),
           Example(container_com_filho, 'container_com_filho.dart'),
