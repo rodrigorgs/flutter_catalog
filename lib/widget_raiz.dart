@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 
 Widget widget_raiz() {
-  //* A organização e tamanho dos widgets segue o seguinte princípio: *Descem restrições. Sobem tamanhos. O pai define a posição.*
+  //* Lembre-se que **o widget raiz sempre ocupa a tela toda**.
   //*
-  //* - Cada widget diz aos seus filhos que tamanhos eles podem ter (restrições), em termos de largura mínima e máxima, altura mínima e máxima.
-  //* - O filho escolhe um tamanho de acordo com as restrições e comunica a seu pai.
-  //* - Conforme o tamanho escolhido, o pai define a posição do filho.
-  //*
-  //* No exemplo, a tela impõe restrições rígidas ao widget raiz (no exemplo, o `Container`): ele deve necessariamente ocupar todo o espaço disponível.
-  //* Isso significa que o widget raiz vai ocupar todo o espaço da tela, mesmo que o widget escolha um tamanho diferente.
+  //* No exemplo, o tamanho informado pelo programador (100x100) é ignorado, de forma que o `Container` ocupa todo o espaço disponível.
   return Container(
     color: Colors.red,
     width: 100,

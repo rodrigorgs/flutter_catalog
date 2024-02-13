@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget container_padding() {
-  //* O Container, quando possui um enchimento (padding), ocupa o espaço necessário para acomodar o filho e o enchimento.
+  //* O `Container`, quando possui um enchimento (`padding`), ocupa o espaço necessário para acomodar o filho mais o enchimento.
   //*
   //* Esse exemplo mostra ainda bordas arredondadas e sombra.
   return Center(

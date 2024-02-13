@@ -14,14 +14,14 @@ void main() {
       body: DemoApp(
         examples: [
           Example(exemplo1, 'exemplo1.dart'),
+          Example(exemplo2, 'exemplo2.dart'),
           Example(widget_raiz, 'widget_raiz.dart'),
-          Example(container_sem_filho, 'container_sem_filho.dart'),
           Example(container_com_filho, 'container_com_filho.dart'),
+          Example(container_sem_filho, 'container_sem_filho.dart'),
           Example(container_padding, 'container_padding.dart'),
-          Example(container_margin, 'container_margin.dart'),
-          Example(center_folgado, 'center_folgado.dart'),
           Example(col_intro, 'col_intro.dart'),
           Example(col_main_align, 'col_main_align.dart'),
+          Example(col_min, 'col_min.dart'),
           Example(col_cross, 'col_cross.dart'),
           Example(col_unbound, 'col_unbound.dart'),
           Example(col_expanded, 'col_expanded.dart'),

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 Widget col_flexible() {
-  //* Dentro de um Column, enquanto o Expanded dentro de um Column determina uma altura exata para seu filho, o Flexible determina a altura *máxima*.
+  //* Dentro de um `Column`, enquanto o `Expanded` determina a altura exata de seu filho (restrição rígida), o `Flexible` determina a altura *máxima* (restrição flexível).
   //*
-  //* No exemplo, o Column possui dois filhos, um Expanded e um Flexible.
-  //* O Column pergunta ao Expanded que altura ele quer assumir. Ele diz que quer ter 50% da altura da tela.
+  //* No exemplo, o `Column` possui dois filhos, um `Expanded` e um `Flexible`.
+  //* O `Expanded` faz seu filho ocupar exatamente 50% da altura da tela.
   //*
-  //* O Column também pergunta ao Flexible que altura ele quer assumir.
-  //* O Flexible então pergunta ao seu filho, Container, que altura ele quer assumir, entre 0 e 50% da altura da tela.
-  //* O Container responde que quer ter 16 pixels, o suficiente para acomodar o seu filho, o Text.
+  //* Já o `Flexible` faz seu filho ocupar a altura que ele quiser, desde que não ultrapasse 50% da altura da tela.
   return Column(
     crossAxisAlignment: CrossAxisAlignment.stretch,
     children: [

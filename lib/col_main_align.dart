@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 Widget col_main_align() {
-  //* O eixo principal (mainAxis) de um Column é vertical.
-  //* O eixo secundário (crossAxis) de um Column é horizontal.
+  //* O eixo principal (`mainAxis`) de um Column é vertical.
   //*
-  //* O MainAxisAlignment.spaceEvenly distribui o espaço entre os filhos de forma que o espaço entre eles seja o mesmo.
-  //* Outras opções: start, end, center, spaceBetween, spaceAround.
+  //* A opção `MainAxisAlignment.center` alinha os filhos no centro do eixo principal.
+  //* Experimente outras opções: `start`, `end`, `spaceEvenly`, `spaceBetween`, `spaceAround`.
+  //*
+  //* > O widget `Row` é similar ao `Column`, mas organiza seus filhos em uma linha horizontal (eixo principal), da esquerda para a direita.
   return Column(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Container(
         color: Colors.red,

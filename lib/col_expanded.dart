@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 Widget col_expanded() {
-  //* O widget Expanded, quando dentro de um Column, faz com que o filho ocupe todo o espaço restante da coluna.
+  //* O widget `Expanded`, quando dentro de um `Column`, faz com que o filho ocupe toda a altura restante da coluna.
   //*
-  //* Havendo mais de um Expanded, o espaço restante é dividido igualmente entre eles.
+  //* Havendo mais de um `Expanded`, a altura restante é dividida igualmente entre eles.
   return Column(
     crossAxisAlignment: CrossAxisAlignment.stretch,
     children: [
