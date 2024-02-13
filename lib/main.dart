@@ -117,6 +117,7 @@ class ExampleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(child: buildCodeWidget(), flex: 1),
         Container(
@@ -214,13 +215,33 @@ class SourceCodeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HighlightView(
-      transformCode(code),
-      language: 'dart',
-      theme: githubTheme,
-      padding: const EdgeInsets.all(12),
-      textStyle: GoogleFonts.firaCode(fontSize: 14),
-      // textStyle: GoogleFonts.sourceCodePro(fontSize: 12),
+    return Stack(
+      children: [
+        HighlightView(
+          transformCode(code),
+          language: 'dart',
+          theme: githubTheme,
+          padding: const EdgeInsets.all(12),
+          textStyle: GoogleFonts.firaCode(fontSize: 14),
+          // textStyle: GoogleFonts.sourceCodePro(fontSize: 12),
+        ),
+        Positioned(
+          top: 0,
+          right: 0,
+          child: IconButton(
+            icon: const Icon(Icons.copy),
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: transformCode(code)));
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Copied to clipboard'),
+                  duration: Duration(milliseconds: 500),
+                ),
+              );
+            },
+          ),
+        ),
+      ],
     );
   }
 }
