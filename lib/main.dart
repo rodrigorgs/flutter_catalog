@@ -108,7 +108,7 @@ class ExampleView extends StatelessWidget {
   }
 
   getFileContents(String filename) async {
-    return await rootBundle.loadString('code/$filename');
+    return await rootBundle.loadString('lib/$filename');
   }
 
   @override
