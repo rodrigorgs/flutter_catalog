@@ -12,7 +12,7 @@ void main() {
     home: Scaffold(
       body: DemoApp(
         examples: [
-          Example(exemplo1, 'exemplo1.dart'),
+          Example(exemplo1, 'exemplo1.dart1'),
           Example(exemplo2, 'exemplo2.dart'),
           Example(widget_raiz, 'widget_raiz.dart'),
           Example(container_com_filho, 'container_com_filho.dart'),
@@ -150,7 +150,7 @@ class ExampleView extends StatelessWidget {
         if (snapshot.hasData) {
           return SourceCodeView("${snapshot.data}");
         } else {
-          return const CircularProgressIndicator();
+          return const Center(child: CircularProgressIndicator());
         }
       },
     );
@@ -176,7 +176,7 @@ class ExampleView extends StatelessWidget {
             );
           }
         } else {
-          return const CircularProgressIndicator();
+          return const Center(child: CircularProgressIndicator());
         }
       },
     );
